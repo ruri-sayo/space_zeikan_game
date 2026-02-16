@@ -1,6 +1,6 @@
 export type Verdict = 'CLEAR' | 'SECONDARY_AUDIT' | 'DETAIN';
 export type Severity = 'critical' | 'warning' | 'info';
-export type Layer = 'logic' | 'physics' | 'bio';
+export type Layer = 'logic' | 'physics';
 
 export interface InterviewLine {
   id: string;

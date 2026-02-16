@@ -1,10 +1,9 @@
-import type { CaseData, Contradiction } from '@/types/case';
-import { matchIsotopeBand, validateDnaMarkers } from '@/engine/bio';
+import type { CaseData, Contradiction, Verdict } from '@/types/case';
 import { evaluateLogicContradictions } from '@/engine/logic';
 import { calcDensity, isDensityMismatch, isDvAnomaly, isThermalMismatch } from '@/engine/physics';
 import { determineVerdict } from '@/engine/scoring';
 
-export const runAudit = (caseData: CaseData): { contradictions: Contradiction[]; recommendedVerdict: string } => {
+export const runAudit = (caseData: CaseData): { contradictions: Contradiction[]; recommendedVerdict: Verdict } => {
   const contradictions: Contradiction[] = [];
 
   contradictions.push(...evaluateLogicContradictions(caseData));
@@ -42,39 +41,6 @@ export const runAudit = (caseData: CaseData): { contradictions: Contradiction[];
       reason: `放熱値が待機電力比で${Math.round(thermalResult.overRatio * 100)}%超過。`,
       evidenceRefs: ['documents.power.idleKw', 'telemetry.thermal.radiatorKw'],
       rule: 'radiatorKw significantly exceeds idleKw'
-    });
-  }
-
-  if (!matchIsotopeBand(caseData.documents.travelBand, caseData.bio.isotope.actual)) {
-    contradictions.push({
-      id: `${caseData.id}-bio-iso`,
-      layer: 'bio',
-      severity: 'warning',
-      reason: '渡航履歴帯と同位体帯が一致しない。',
-      evidenceRefs: ['documents.travelBand', 'bio.isotope.actual'],
-      rule: 'travelBand !== isotope.actual'
-    });
-  }
-
-  const dna = validateDnaMarkers(caseData.documents.species, caseData.bio.dnaMarkers);
-  if (dna.speciesMismatch) {
-    contradictions.push({
-      id: `${caseData.id}-bio-species`,
-      layer: 'bio',
-      severity: 'warning',
-      reason: '申告品種とDNAマーカーに不一致。',
-      evidenceRefs: ['documents.species', 'bio.dnaMarkers'],
-      rule: 'declared species markers mismatch'
-    });
-  }
-  if (dna.hasRisk) {
-    contradictions.push({
-      id: `${caseData.id}-bio-risk`,
-      layer: 'bio',
-      severity: 'critical',
-      reason: '危険DNAマーカーを検出。',
-      evidenceRefs: ['bio.dnaMarkers'],
-      rule: 'contains risky marker'
     });
   }
 

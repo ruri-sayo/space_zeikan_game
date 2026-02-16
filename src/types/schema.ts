@@ -27,7 +27,7 @@ export const caseSchema = z.object({
     contradictions: z.array(
       z.object({
         id: z.string(),
-        layer: z.enum(['logic', 'physics', 'bio']),
+        layer: z.enum(['logic', 'physics']),
         severity: z.enum(['critical', 'warning', 'info']),
         reason: z.string(),
         evidenceRefs: z.array(z.string()),
