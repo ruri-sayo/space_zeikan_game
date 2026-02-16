@@ -1,0 +1,26 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+body {
+  margin: 0;
+  background: #0f121a;
+  color: #e5e7eb;
+}
+.app-shell { padding: 12px; }
+.header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.meta { display: flex; gap: 12px; font-size: 0.9rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.panel { background: #1a2030; border: 1px solid #2d3748; border-radius: 8px; padding: 10px; min-height: 300px; }
+.panel pre { white-space: pre-wrap; font-size: 0.8rem; }
+.tabs { display: flex; gap: 8px; margin-bottom: 10px; }
+button { background: #253049; color: #e5e7eb; border: 1px solid #3d4b6a; border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+button.active { outline: 2px solid #7dd3fc; }
+.viz-box { background: #0d1320; border: 1px solid #2e3b56; border-radius: 6px; padding: 12px; min-height: 120px; }
+.actions { display: flex; gap: 8px; margin-top: 10px; }
+.result-modal { position: fixed; inset: 0; background: rgb(0 0 0 / 0.6); display: flex; align-items: center; justify-content: center; }
+.modal-inner { background: #141b2b; padding: 16px; border-radius: 10px; min-width: 320px; }
+@media (max-width: 960px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .grid > :last-child { grid-column: span 2; }
+}

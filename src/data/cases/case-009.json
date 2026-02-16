@@ -1,0 +1,71 @@
+{
+  "id": "case-009",
+  "title": "監査案件 9",
+  "difficulty": 5,
+  "brief": "第9監査便。提出資料と実測データの整合確認を実施する。",
+  "documents": {
+    "manifest": {
+      "massKg": 14700,
+      "volumeM3": 51,
+      "material": "Al-2219"
+    },
+    "route": {
+      "from": "Hilo",
+      "to": "H680k",
+      "etaHours": 21.2,
+      "declaredStops": 0
+    },
+    "power": {
+      "idleKw": 49
+    },
+    "species": "kelp",
+    "travelBand": "PacificBand-3"
+  },
+  "telemetry": {
+    "orbit": {
+      "expectedDv": 3450,
+      "actualDv": 4071.0
+    },
+    "vibration": {
+      "peaksHz": [
+        40,
+        72,
+        136
+      ]
+    },
+    "thermal": {
+      "radiatorKw": 80.85
+    }
+  },
+  "bio": {
+    "isotope": {
+      "expected": "PacificBand-3",
+      "actual": "EurasiaBand-1"
+    },
+    "dnaMarkers": [
+      "MKR-X9",
+      "MKR-44"
+    ]
+  },
+  "interviews": [
+    {
+      "id": "w1",
+      "speaker": "Captain",
+      "text": "直行した。補給寄港はない。"
+    },
+    {
+      "id": "w2",
+      "speaker": "Engineer",
+      "text": "冷却系は待機時40kW未満。"
+    },
+    {
+      "id": "w3",
+      "speaker": "Biologist",
+      "text": "生体試料は申告品種のみ。"
+    }
+  ],
+  "truth": {
+    "requiredVerdict": "DETAIN",
+    "contradictions": []
+  }
+}

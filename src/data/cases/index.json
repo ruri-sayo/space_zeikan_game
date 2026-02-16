@@ -1,0 +1,52 @@
+[
+  {
+    "id": "case-001",
+    "title": "監査案件 1",
+    "difficulty": 1
+  },
+  {
+    "id": "case-002",
+    "title": "監査案件 2",
+    "difficulty": 1
+  },
+  {
+    "id": "case-003",
+    "title": "監査案件 3",
+    "difficulty": 2
+  },
+  {
+    "id": "case-004",
+    "title": "監査案件 4",
+    "difficulty": 2
+  },
+  {
+    "id": "case-005",
+    "title": "監査案件 5",
+    "difficulty": 3
+  },
+  {
+    "id": "case-006",
+    "title": "監査案件 6",
+    "difficulty": 3
+  },
+  {
+    "id": "case-007",
+    "title": "監査案件 7",
+    "difficulty": 4
+  },
+  {
+    "id": "case-008",
+    "title": "監査案件 8",
+    "difficulty": 4
+  },
+  {
+    "id": "case-009",
+    "title": "監査案件 9",
+    "difficulty": 5
+  },
+  {
+    "id": "case-010",
+    "title": "監査案件 10",
+    "difficulty": 5
+  }
+]
