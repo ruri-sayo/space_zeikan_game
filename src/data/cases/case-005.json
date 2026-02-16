@@ -1,0 +1,71 @@
+{
+  "id": "case-005",
+  "title": "監査案件 5",
+  "difficulty": 3,
+  "brief": "第5監査便。提出資料と実測データの整合確認を実施する。",
+  "documents": {
+    "manifest": {
+      "massKg": 13500,
+      "volumeM3": 47,
+      "material": "Al-2219"
+    },
+    "route": {
+      "from": "Hilo",
+      "to": "H680k",
+      "etaHours": 20.0,
+      "declaredStops": 0
+    },
+    "power": {
+      "idleKw": 45
+    },
+    "species": "kelp",
+    "travelBand": "PacificBand-3"
+  },
+  "telemetry": {
+    "orbit": {
+      "expectedDv": 3250,
+      "actualDv": 3835.0
+    },
+    "vibration": {
+      "peaksHz": [
+        36,
+        68,
+        132
+      ]
+    },
+    "thermal": {
+      "radiatorKw": 74.25
+    }
+  },
+  "bio": {
+    "isotope": {
+      "expected": "PacificBand-3",
+      "actual": "EurasiaBand-1"
+    },
+    "dnaMarkers": [
+      "MKR-12",
+      "MKR-44"
+    ]
+  },
+  "interviews": [
+    {
+      "id": "w1",
+      "speaker": "Captain",
+      "text": "直行した。補給寄港はない。"
+    },
+    {
+      "id": "w2",
+      "speaker": "Engineer",
+      "text": "放熱は申告値通り。"
+    },
+    {
+      "id": "w3",
+      "speaker": "Biologist",
+      "text": "生体試料は申告品種のみ。"
+    }
+  ],
+  "truth": {
+    "requiredVerdict": "DETAIN",
+    "contradictions": []
+  }
+}
