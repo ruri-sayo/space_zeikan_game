@@ -1,0 +1,71 @@
+{
+  "id": "case-010",
+  "title": "監査案件 10",
+  "difficulty": 5,
+  "brief": "第10監査便。提出資料と実測データの整合確認を実施する。",
+  "documents": {
+    "manifest": {
+      "massKg": 15000,
+      "volumeM3": 52,
+      "material": "Composite"
+    },
+    "route": {
+      "from": "Hilo",
+      "to": "H680k",
+      "etaHours": 21.5,
+      "declaredStops": 1
+    },
+    "power": {
+      "idleKw": 50
+    },
+    "species": "kelp",
+    "travelBand": "EurasiaBand-1"
+  },
+  "telemetry": {
+    "orbit": {
+      "expectedDv": 3500,
+      "actualDv": 3500.0
+    },
+    "vibration": {
+      "peaksHz": [
+        41,
+        73,
+        137
+      ]
+    },
+    "thermal": {
+      "radiatorKw": 50.0
+    }
+  },
+  "bio": {
+    "isotope": {
+      "expected": "EurasiaBand-1",
+      "actual": "PacificBand-3"
+    },
+    "dnaMarkers": [
+      "MKR-12",
+      "MKR-44"
+    ]
+  },
+  "interviews": [
+    {
+      "id": "w1",
+      "speaker": "Captain",
+      "text": "補給寄港を1回実施した。"
+    },
+    {
+      "id": "w2",
+      "speaker": "Engineer",
+      "text": "放熱は申告値通り。"
+    },
+    {
+      "id": "w3",
+      "speaker": "Biologist",
+      "text": "生体試料は申告品種のみ。"
+    }
+  ],
+  "truth": {
+    "requiredVerdict": "CLEAR",
+    "contradictions": []
+  }
+}
